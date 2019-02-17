@@ -26,6 +26,7 @@ EOF
 
 ## Start default mariadb post-deploy logic delivered by sx lib
 doMariadbPostDeploy
+exit 0;
 
 ## Use sx lib to configure user
 #config_createadmin
