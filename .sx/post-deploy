@@ -24,10 +24,16 @@ cat << "EOF"
 | 
 EOF
 
-## Execute your own post-deploy logic delivered by sx lib
-## if you want to fail this action, exit with error code > 0
-# mkdir -p $DATA_PATH; 
-# exit 0;
-
 ## Start default mariadb post-deploy logic delivered by sx lib
 doMariadbPostDeploy
+
+## Use sx lib to configure user
+#config_createadmin
+#config_createuser
+
+## Use sx lib to configure database and load data
+#config_resetdatabase
+#config_importsql
+
+## Loading data from sql file
+#mysql -u $MYSQL_USER -p$MYSQL_PASSWORD -h $HOSTNAME -D $MYSQL_DATABASE < /path/to/example.sql

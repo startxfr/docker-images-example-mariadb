@@ -23,7 +23,7 @@ cat << "EOF"
 EOF
 
 ## Execute your own mariadb daemon instance
-# exec mysqld_safe
+#exec mysqld_safe
 
 ## Start default mariadb process delivered by sx lib
 startMariadbService

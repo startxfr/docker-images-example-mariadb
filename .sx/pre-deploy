@@ -30,3 +30,6 @@ EOF
 
 ## Start default mariadb pre-deploy logic delivered by sx lib
 doMariadbPreDeploy
+
+## Use sx lib to configure database conf and directory
+#init_installDb
